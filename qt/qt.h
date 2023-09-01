@@ -1,0 +1,15 @@
+#include <QtCore>
+#include <QtGui>
+#include <QtWidgets>
+#include <QtPrintSupport>
+#include <QtNetwork>
+#include <QtConcurrent>
+#include <QtDBus>
+#include <QtDesigner>
+#include <QtDesignerComponents>
+#include <QtHelp>
+#include <QtOpenGL>
+#include <QtSql>
+#include <QtTest>
+#include <QtUiPlugin>
+#include <QtXml>
