@@ -40,7 +40,11 @@ cp -LR /usr/src/linux-headers-5.4.0-159-generic/ kernel-headers/
 cp -LR /usr/lib/gcc/x86_64-linux-gnu/9/include system-headers/
 ```
 
-Then write the makefile:
+Don't forget to use `-L` option in `cp` to handle the symbolic/soft links correctly.
+
+## Makefiles
+
+Write a linux_kernel_5_4.mak to include all the required headers:
 
 ```makefile
 TIL_NAME = linux_kernel_5_4
@@ -67,8 +71,6 @@ CLANG_ARGV = -target x86_64-pc-linux-gnu                               \
 
 include ../idaclang.mak
 ```
-
-## Makefiles
 
 Change the ldaclang.mak to call Windows binaries from WSL:
 
@@ -130,3 +132,8 @@ struct fown_struct
 ```
 
 If you have any better solutions or problems, PR/issues please :).
+
+## References
+
+- [1] Using the IDAClang plugin for IDA Pro https://hex-rays.com/tutorials/idaclang/
+- [2] Type libraries in IDA: https://hex-rays.com/blog/igors-tip-of-the-week-60-type-libraries/
