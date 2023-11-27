@@ -2,7 +2,7 @@ IDACLANG_ARGS += --idaclang-log-all
 IDACLANG_ARGS += --idaclang-tilname $(TIL_NAME)
 IDACLANG_ARGS += --idaclang-tildesc $(TIL_DESC)
 
-CLANG_ARGV += -ferror-limit=50
+CLANG_ARGV += -ferror-limit=200
 
 all: $(TIL_NAME)
 .PHONY: all $(TIL_NAME) clean
